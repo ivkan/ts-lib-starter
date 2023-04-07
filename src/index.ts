@@ -1,2 +1,2 @@
 export const foo = 'foo';
-export const foo1 = 'foo1';
+export const foo1 = 'foo3';
