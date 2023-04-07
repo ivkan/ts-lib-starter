@@ -20,7 +20,13 @@
     "build": "pnpm run build-fast -- --dts-resolve",
     "test": "vitest run",
     "prepublishOnly": "pnpm run build",
+    "prepare": "husky install",
     "semantic-release": "semantic-release"
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true"
+    }
   },
   "license": "MIT",
   "devDependencies": {
@@ -31,6 +37,8 @@
     "@semantic-release/github": "^8.0.7",
     "@semantic-release/npm": "^10.0.2",
     "@semantic-release/release-notes-generator": "^10.0.3",
+    "commitizen": "^4.3.0",
+    "husky": "^8.0.3",
     "prettier": "2.8.4",
     "semantic-release": "^21.0.1",
     "tsup": "6.6.3",
